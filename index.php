@@ -6,7 +6,6 @@
     <title>PHP</title>
 </head>
 <body>
-	
     <?php
         echo "Hello Worlds";
         echo "\n";
@@ -16,7 +15,7 @@
     <p>Hi my name is <?php echo $name; ?> and I'm learning PHP.</p>
 	
     <?php
-        echo $_SERVER["DOCUMENT_ROOT"];
+	echo $_SERVER["DOCUMENT_ROOT"];
 	echo "<br>";
 	echo $_SERVER["PHP_SELF"];
 	echo "<br>";
@@ -32,8 +31,19 @@
 	echo "<br>";
 	echo $_REQUEST["fname"];
 	echo "<br>";
-     ?>
-     
+    ?>
+	<hr>
+	<h3>String Operator : concatenation</h3>
+	<?php
+		$a = "Hello";
+		$b = "Worlds";
+		$c = $a . " " . $b;
+		echo $c;
+	?>
+	<hr>
+	<p>Arithmetic operators</p>
+	<p> % returns remainer</p>
+
 
 </body>
 </html>
