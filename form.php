@@ -7,22 +7,22 @@
     <title>Form Data</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="./includes/formHandler.php" method="POST">
         <label for="firstName">First name:</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name.." >
+        <input type="text" required id="firstname" name="firstname" placeholder="Enter your first name.." >
         <label for="middleName">Middle name:</label>
-        <input type="text" id="middleName" name="middleName" placeholder="Enter your middle name.." >
+        <input type="text" id="middleName" name="middlename" placeholder="Enter your middle name.." >
         <label for="lastName">Last name:</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name.." >
+        <input type="text" id="lastName" name="lastname" placeholder="Enter your last name.." >
         <label for="favorPet">Favourite Pet:</label>
-        <select id="favorPet" name="favPet">
+        <select id="favorPet" name="favpet">
             <option value="none">Select your favourite pet</option>
             <option value="dog">Dog</option>
             <option value="Cat">Cat</option>
             <option value="Bird">Bird</option>
         </select>
 
-        <input type="submit" value="Submit">
+        <input type="submit"  name="submit" value="Submit">
     </form>
 </body>
 </html>
