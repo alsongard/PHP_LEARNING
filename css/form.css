@@ -1,0 +1,29 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+form{
+    background-color: rgb( 52, 73, 94);
+    width:50%;
+    margin:20px auto;
+    padding: 100px;
+    border-radius: 10px;
+}
+body{
+    background-color: rgb( 133, 146, 158 );
+}
+form label{
+    display: block;
+    margin: 5px 0;
+}
+form input{
+    display: block;
+    width: 100%;
+    padding:7px;
+    border-radius: 5px;
+    border:none;
+}
+input[type="submit"]{
+    margin:10px 0;
+}
