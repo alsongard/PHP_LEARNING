@@ -21,18 +21,17 @@
     </select>
     <label for="Value">Enter value :</label>
     <input type="number" name="value_2" placeholder="Enter any number...">    
-    <button>Calculate</button>
-    <!-- <input type="submit" value="calculate"> -->
+    <!-- <button>Calculate</button> -->
+    <input type="submit" value="calculate">
     </form>
 
     <?php
-        if ($_SERVER["REQUEST_METHOD" == "POST"]){
+        if ($_SERVER["REQUEST_METHOD"]== "POST"){
             $num_1 = filter_input(INPUT_POST, "value_1", FILTER_SANITIZE_NUMBER_FLOAT);
             $num_2 = filter_input(INPUT_POST, "value_2", FILTER_SANITIZE_NUMBER_FLOAT);
             $operator = htmlspecialchars($_POST["operator"]);
-            echo "Value of num_1 is ". $num_1 . "<br>";
             $bool = false;
-            if (empty($num_1) || empty($num_2)){
+            if (!empty($num_1) || !empty($num_2)){
                 echo "<p class='error' >Error: Please enter a value</p>";
                 $bool = true;
             }

@@ -1,5 +1,5 @@
 body{
-    /* background-color: rgb( 25, 111, 61 ); */
+    background-color: rgb( 25, 111, 61 );
 }
 form{
     border-radius: 10px;
@@ -7,7 +7,7 @@ form{
     max-width: 100%;
     margin:40px auto;
     padding:50px 20px;
-    /* background-color: rgb( 46, 204, 113 ); */
+    background-color: rgb( 46, 204, 113 );
 }
 form label, form input{
     display: block;
@@ -22,12 +22,21 @@ form input{
     border:none;
 }
 .error{
-    color:red;
+    background-color: black;
+    color:rgb(238, 157, 157);
     font-size:20px;
     font-weight: 400;
+    text-align: center;
+    width:40%;
+    margin:0 auto;
+    border-radius: 10px;
+    padding:5px;
 }
 .result{
     color:black;
     font-size:20px;
     font-weight: 400;
+    position: absolute;
+    top:44%;
+    text-align: center;
 }
