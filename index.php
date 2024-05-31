@@ -104,7 +104,55 @@
 			23, 0, 30, 10 => "Value is not magic number $magic_number",
 			default => "No magic number was found"
 		};
-		echo $result;
+		echo $result;		
 	?>
+
+	<hr>
+	<!------------ARRAYS---------------------->
+	<h2>Arrays</h2>	
+	<?php
+	//arrays to delcarre
+	$fruits = []; 
+	//or $fruits = array();
+	$fruits = ["Apple", "Banana", "Orange"];
+	echo $fruits[0];
+	//arrays use index to access elements
+	//delete an element using unset()
+	unset($fruits[2]);
+	echo "<p>$fruits</p>";
+	print_r($fruits);
+	echo "<br>";
+	echo '<pre>';
+	print_r($fruits);
+	echo '</pre>';
+	echo "<br>";
+
+	//using array_splice method
+	//add item
+	array_splice($fruits, 1, 0, "Mango");
+	print_r($fruits);
+	echo "<br>";
+	//remove an item
+	array_splice($fruits, 0, 1);
+	print_r($fruits);
+
+	echo "<br>";
+	//asoociative arrays
+	$tasks = [
+		"laundry" => "Wash clothes",
+		"cleaning" => "Clean the house",
+		"shopping" => "Buy groceries",
+		"gardening" => "Water the plants"
+	];
+	//access elements in associative arrays
+	echo $tasks["laundry"];
+	//add item 
+	$tasks["cooking"] = "Cook dinner";
+	echo "<br>";
+
+	print_r($tasks);
+
+?>
+	
 </body>
 </html>
