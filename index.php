@@ -151,8 +151,60 @@
 	echo "<br>";
 
 	print_r($tasks);
+	echo "<br>";
 
-?>
+	//loops
+	echo "<hr>";
+	echo "<h2>LOOPS</h2>";
+	for ($i = 0; $i < 11; $i++){
+		echo "Value of i is ". $i;
+		echo "<br>";
+	}
+	$bool = true;
+	$a = 1;
+	while($bool){
+		echo "Value of a is " . $a;
+		echo "<br>";
+
+		$a++;
+		if ($a == 10){
+			$bool = false;
+		}
+	}
+	$z = 0;
+	do {
+		echo "value : ". $z;
+		echo "<br>";
+		$z++;
+	}
+	while($z < 5);
+
+	echo "<hr>";
+	$food = ["meat", "vegetables", "fruits"];
+	for ($i = 0; $i < count($food); $i++){
+		echo "Type of food is ". $food[$i] . "<br>";
+	}
+	//for each loop
+	$grades = ["A", "B", "C", "D", "E", "F"];
+	foreach ($grades as $gradeValue){
+		echo "Grades in school are : ". $gradeValue . "<br>";
+	}
+	/*$gradeValue = [
+		"A" => [100, 99, 98, 84],
+		"B" => [83, 88, 87, 70],
+		"C" => [69, 64, 60, 59],
+		"D" => [40, 38, 34, 32]
+	];*/
+	$gradeValue = [
+		"A" => 100,
+		"B" => 84,
+		"C" => 69,
+		"D" => 40
+	];
+	foreach ($gradeValue as $grade => $gradeItem){
+		echo "Grade : ". $grade . " : Marks : ". $gradeItem . "<br>";
+	}
+	?>
 	
 </body>
 </html>
