@@ -8,20 +8,20 @@
 <body>
     <?php
         echo "Hello Worlds";
-        echo "\n";
+        echo "<br>";
         $name = "Gard Alson";
         echo $name;
     ?>
     <p>Hi my name is <?php echo $name; ?> and I'm learning PHP.</p>
 	
     <?php
-	echo $_SERVER["DOCUMENT_ROOT"];
+	echo $_SERVER["DOCUMENT_ROOT"]; // returns the document folder
 	echo "<br>";
 	echo $_SERVER["PHP_SELF"];
 	echo "<br>";
 	echo $_SERVER["SERVER_NAME"];
 	echo "<br>";
-	echo $_SERVER["REQUEST_METHOD"];
+	echo $_SERVER["REQUEST_METHOD"];//metod which is used to submit data / GET/ POST /
 	echo "<br>";
 	echo $_GET["fname"];
 	echo "<br>";
