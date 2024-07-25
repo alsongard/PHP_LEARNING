@@ -23,5 +23,14 @@
 		<input type="text" name="email" placeHolder="email">
 		<input type="submit" value="submit">
     </form>
+
+	<hr>
+
+	<!---------------delete user data---------------->
+	<form action="./includes/deleteuser.php" method="POST">
+		<h1>Delete User Details</h1>
+		<input type="text" name="username" placeholder="Enter username..">
+		<input type="password" name="pwd" placeholder="Enter password..">
+		<input type="submit" value="submit">
 </body>
 </html>
