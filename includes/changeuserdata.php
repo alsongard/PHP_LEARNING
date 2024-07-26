@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         require_once "./dbh.inc.php";
         //update data for the user
-        $query = "UPDATE userdata SET username = :usrname, email= :usremail, pwd = :usrpwd WHERE id = 4;";
+        $query = "UPDATE userdata SET email= :usremail WHERE username = :usrname AND pwd = :usrpwd;";
         
         //prepare the statement
         $stmt = $pdo->prepare($query);
