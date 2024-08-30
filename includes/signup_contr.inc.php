@@ -55,7 +55,7 @@
         }
         else
         {
-            return false;
+            return false;j
         };
     };
     function is_id_taken(object $pdo, string $userid)
@@ -68,4 +68,8 @@
         {
             return false;
         };
+    };
+    function create_user(object $pdo, string $username, string $email, string $userid, string $userpasswd)
+    {
+        set_user( $pdo, $username, $email, $userid,  $userpasswd);
     };

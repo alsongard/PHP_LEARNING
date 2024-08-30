@@ -14,7 +14,7 @@
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result; // return if username exist
-    }
+    };
 
     function get_email(object $pdo, string $email)
     {
@@ -28,7 +28,7 @@
         //fetch data if email exist
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
-    }
+    };
     function get_id(object $pdo, string $userid)
     {
         $query = "SELECT userId FROM registration WHERE userId=:userid;";
@@ -38,4 +38,25 @@
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
+    };
+    
+    function set_user(object $pdo, string $username, string $email, string $userid, string $userpasswd)
+    {
+        //query data inserted by user
+        $query = "INSERT INTO registration(username, email, userId, userPasswd) VALUES (:username,:email,:userId,:userPasswd);";
+        //hash passowrd first
+        //password_hash = inbuilt function that hashes password, 3 arguments namely, password submitedd by 
+        //user, hashing algorighm (PASSWORD_BCRYPT), cost factor = array discourages brute force attacks.
+        $options = [
+            "cost"=>12
+        ];
+        $hashedPwd = password_hash($userpasswd, PASSWORD_BCRYPT,$options );
+        
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(":username", $username);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":userId", $userid);
+        $stmt->bindParam(":userPasswd", $hashedPwd);
+        $stmt->execute();
     }
+

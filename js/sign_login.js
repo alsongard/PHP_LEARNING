@@ -19,7 +19,6 @@ loginBtn.addEventListener("click", ()=>{
 
 signupbtn.addEventListener("click", ()=>{
     form.action = "./includes/registration.php";
-
     userField.style.display = "flex";
     idField.style.display = "flex";
     confirmField.style.display = "flex";

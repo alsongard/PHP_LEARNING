@@ -1,3 +1,7 @@
+<?php
+    require_once "./includes/signup_view.inc.php";
+    require_once "./includes/config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +43,10 @@
                 <p style="text-align: left;">Forgot password <span> <a href="">Click here!</a> </span></p>    
                 <input type="submit" value="submit">
             </form>
+            <?php
+            check_signup_error();
+            //function is used to display errors if found
+            ?>
         </div>
     </section>
     <script src="./js/sign_login.js" type="text/javascript"></script>

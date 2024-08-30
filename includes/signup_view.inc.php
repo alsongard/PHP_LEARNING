@@ -14,7 +14,18 @@
             //loop over
             foreach ($errors as $singleError)
             {
+                echo "<br>";
                 echo "<p class='error-msg'>" . $singleError . "</p>";
             };
-        };
+        }
     };
+    
+    //landing_page functions
+    function success()
+    {
+        if(isset($_GET["signup"]) &&  $_GET["signup"] === "successfull")
+        {
+            echo "<br>";
+            echo "<p class='succ-msg'> Successfully signup </p>";
+        }
+    }

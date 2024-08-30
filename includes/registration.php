@@ -7,8 +7,6 @@
         $userPasswd = $_POST["user_password"];
         $confirmPasswd = $_POST["confirm_password"];
         
-
-        
         try 
         {
             require_once "./dbh.inc.php";
@@ -54,28 +52,15 @@
             {
                 $_SESSION["signup_errors"] = $errors;
                 header("Location: ../user_login_signup.php");
-                die();
+                die(); //ensures that no script after is executed
             }
 
-            //hash passowrd first
-            $query = "INSERT INTO registration(username, email, userId, userPasswd) VALUES (:username,:email,:userId,:userPasswd);";
-            $options = [
-                "cost"=>12
-            ];
-            $hashedPwd = password_hash($userPasswd, PASSWORD_BCRYPT,$options );
-            
-            
-            
-            $stmt = $pdo->prepare($query);
-            $stmt->bindParam(":username", $userName);
-            $stmt->bindParam(":email", $email);
-            $stmt->bindParam(":userId", $userId);
-            $stmt->bindParam(":userPasswd", $hashedPwd);
-            $stmt->execute();
-
+            create_user($pdo, $userName, $email, $userId, $userPasswd);
+            header("Location: ../landing_page.php?signup=successfull");
             $pdo = null;
             $stmt = null;
-            header("Location: ../login_sign.php");
+            die();  //ensures that no script after is executed
+            
         }
         catch(PDOException $e)
         {
