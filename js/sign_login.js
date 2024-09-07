@@ -8,7 +8,8 @@ const form = document.querySelector("form");
 
 
 loginBtn.addEventListener("click", ()=>{
-    form.action = "./includes/login_regester.php";
+    
+    form.action = "./includes/login_register.php";
     userField.style.display = "none";
     idField.style.display = "none";
     confirmField.style.display = "none";

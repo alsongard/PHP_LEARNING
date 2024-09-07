@@ -55,7 +55,7 @@
         }
         else
         {
-            return false;j
+            return false;
         };
     };
     function is_id_taken(object $pdo, string $userid)

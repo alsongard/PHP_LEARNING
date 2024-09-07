@@ -1,6 +1,7 @@
 <?php
-    require_once "./includes/signup_view.inc.php";
     require_once "./includes/config.php";
+    require_once "./includes/signup_view.inc.php";
+    require_once "./includes/login_view.inc.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +47,13 @@
             <?php
             check_signup_error();
             //function is used to display errors if found
+            check_login_errors();
             ?>
+            <form action="./includes/logout.inc.php">
+                <button>Logout</button>
+            </form>
+
+
         </div>
     </section>
     <script src="./js/sign_login.js" type="text/javascript"></script>
