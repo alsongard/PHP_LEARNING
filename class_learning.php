@@ -17,7 +17,7 @@
             <p>Enter second Number</p>
             <input class="number2" type="number" name="number2"/>
             <br>
-            <input id="submit" type="submit" value="submit"/>
+            <button>submit</button>
         </fieldset>
     </form>
     <?php
@@ -27,18 +27,29 @@
             $number2 = $_POST["number2"];
             echo "<p>  Number1 : " . $number1 ."</p>";
             echo "<p>  Number1 : " . $number2 ."</p>";
-            
 
-            $sum = $number1 + $number2;
+            //check data type
+            echo "<p> Data type of variable number1 is ". gettype($number1) . "</p>";
+            echo "<p> Data type of variable number2 is ". gettype($number2) . "</p>";
+
+            // perform string conversion
+            $new_number1 = (int)$number1;
+            $new_number2 = (int)$number2;
+            echo "<p> Data type of variable new_number1 is ". gettype($new_number1) . "</p>";
+            echo "<p> Data type of variable new_number2 is ". gettype($new_number2) . "</p>";
+
+            $sum = $new_number1 + $new_number2;
             echo $sum;
         }
     ?>
 
+    <!-- LESSON 2 : CALCULATION ON AGE -->
+
     <form method="POST">
         <fieldset>
             <legend>Compute Age</legend>
-            <p>Enter Current Year </p>
-            <input type="number" name="currentYear" placeholder="Enter year.."/>
+            <label for="date-of-birth">Enter data of birth(dob)</label>
+            <input type="date" name="dob" placeholder="Enter date of birth"/>
             <input type="submit" value="compute age"/>
         </fieldset>
     </form> 
@@ -46,13 +57,14 @@
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $year = $_POST["currentYear"];
             $dob = $_POST["dob"];
 
-            echo $year;
-            echo "<br>";
-            echo $dob;
-            $age = $year - $dob;
+            //convert dob object into timestamp
+            $dob_year = date("Y", strtotime($dob));
+            $currentYear = date("Y");
+            //convert $currentYear into integer
+            $currentYear = (int)$currentYear;
+            $age = $currentYear - $dob;
             echo "<p>His/Her age is " .$age ."</p>"; 
         }
     ?>
@@ -73,9 +85,9 @@
         console.log(typeof(value2));
 
         console.log(number1.value + number2.value);
-        form.addEventListener("submit", (event)=>{
-            event.preventDefault();
-        })
+        // form.addEventListener("submit", (event)=>{
+        //     event.preventDefault();
+        // })
     </script>
 
 </body>
