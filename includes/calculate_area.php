@@ -33,3 +33,11 @@
         echo "<p> Number of tiles required for the room is ". $answer . "</p>";
 
     }
+
+    /* <?php
+       require_once "includes/calculate_area.php";
+       $my_answer = getArea(10, 10, 0.36);
+       echo "<p> Number of tiles required for the room is ". $my_answer . "</p>";
+   
+       ?>
+    */
