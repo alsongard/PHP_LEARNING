@@ -1,7 +1,7 @@
 # CALCULATOR WEBSITE
 
 ## Description
-This is a rensponsive website that takes a user input, perform either simple or complex mathematical operations depending on the users option.
+This is a website that takes a user input, perform either simple or complex mathematical operations depending on the users option.
 
 ## table of content
 * [Installation](#installation)  
