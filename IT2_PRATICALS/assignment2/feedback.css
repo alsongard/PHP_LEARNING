@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --text-main-color:white;
+}
+body{
+    background: linear-gradient(to right ,  rgb(52, 73, 94),rgb(52, 73, 94) ) ;
+    color:var(--text-main-color);
+}
+form{
+    padding:50px 100px;
+    background-color:  #212f3d ;
+    width:70%;
+    margin:100px auto;
+    border-radius:10px;
+}
+form input, form textarea, form select{
+    width:100%;
+    display: block;
+    margin-bottom: 10px;
+    padding:4.5px;
+    border:none;
+    font-weight: bold;
+}
+form select{
+    width:100px;
+}
+input[type="submit"]{
+    width:30%;
+    border-radius: 5px;
+    margin:0 auto;
+}
