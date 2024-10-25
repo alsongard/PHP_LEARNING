@@ -8,13 +8,13 @@
 </head>
 <body>
 
-    <form method="POST" action="submit-feedback.php">
+    <form method="POST" action="./submit-feedback.php">
         <label for="full name">Name</label>
         <input name="fullName" type="text" placeholder="Name..."/>
         <label for="email">Email</label>
         <input name="email" type="email" placeholder="Email..."/>
         <label for="feedback">Feedback</label>
-        <textarea  rows="8" name="feedback"></textarea>
+        <textarea  rows="8" name="feedback" placeholder="Message..."></textarea>
         <select name="rank">
             <option value="">Choose</option>
             <option value="1">1</option>
