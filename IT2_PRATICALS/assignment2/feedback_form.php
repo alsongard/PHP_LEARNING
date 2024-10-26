@@ -7,12 +7,13 @@
     <title>Campaigns</title>
 </head>
 <body>
-
+    <h2 class="title">Campaign Feedback</h2>
     <form method="POST" action="./submit-feedback.php">
+        <p>Fill in the form</p>
         <label for="full name">Name</label>
-        <input name="fullName" type="text" placeholder="Name..."/>
+        <input name="fullName" type="text" placeholder="Name of candidate"/>
         <label for="email">Email</label>
-        <input name="email" type="email" placeholder="Email..."/>
+        <input name="email" type="email" placeholder="Enter your Email"/>
         <label for="feedback">Feedback</label>
         <textarea  rows="8" name="feedback" placeholder="Message..."></textarea>
         <select name="rank">
@@ -23,13 +24,21 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <input type="submit" value="submit"/>
+        <div class="button-container">
+            <input type="submit" value="submit"/>
+            <button tpye="button">reset</button>
+        </div>
     </form>
 
-    <h2 class="title">Display data from name of candidate</h2>
+    <h2 class="title">Display details of the candidate</h2>
     <form action="./view_feedback.php" method="POST">
+        <p>Enter name of a candidate to display his/her rating, feedback message and user email. </p>
         <input name="candidate"  type="text" placeholder="Enter name of candidate"/>
-        <input type="submit" value="display candidate"/>
+
+        <div class="button-container">
+            <input type="submit" value="submit"/>
+            <button tpye="button">reset</button>
+        </div>
     </form>
 </body>
 </html>
