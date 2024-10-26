@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2 class="title">Campaign Feedback</h2>
-    <form method="POST" action="./submit-feedback.php">
+    <form id="form" method="POST" action="./submit-feedback.php">
         <p>Fill in the form</p>
         <label for="full name">Name</label>
         <input name="fullName" type="text" placeholder="Name of candidate"/>
@@ -26,19 +26,20 @@
         </select>
         <div class="button-container">
             <input type="submit" value="submit"/>
-            <button tpye="button">reset</button>
+            <button  id="rstBtn" type="button">reset</button>
         </div>
     </form>
 
     <h2 class="title">Display details of the candidate</h2>
-    <form action="./view_feedback.php" method="POST">
+    <form id="form" action="./view_feedback.php" method="POST">
         <p>Enter name of a candidate to display his/her rating, feedback message and user email. </p>
         <input name="candidate"  type="text" placeholder="Enter name of candidate"/>
 
         <div class="button-container">
             <input type="submit" value="submit"/>
-            <button tpye="button">reset</button>
+            <button id="rstBtn" type="button">reset</button>
         </div>
     </form>
+    <script src="./feedback_form.js" type="text/javascript"></script>
 </body>
 </html>
