@@ -25,5 +25,11 @@
         </select>
         <input type="submit" value="submit"/>
     </form>
+
+    <h2 class="title">Display data from name of candidate</h2>
+    <form action="./view_feedback.php" method="POST">
+        <input name="candidate"  type="text" placeholder="Enter name of candidate"/>
+        <input type="submit" value="display candidate"/>
+    </form>
 </body>
 </html>
