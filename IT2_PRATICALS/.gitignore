@@ -1,0 +1,5 @@
+/mysql_connector_python/bin
+/mysql_connector_python/include
+/mysql_connector_python/lib
+/mysql_connector_python/lib64
+/mysql_connector_python/pyvenv.cfg
